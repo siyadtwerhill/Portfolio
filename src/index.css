@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@layer base {
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+  
+    html, body, #root {
+      width: 100%;
+      height: 100%;
+    }
+  
+    body {
+      @apply bg-[#030a1b] text-white font-sans leading-relaxed;
+    }
+  
+    a {
+      @apply no-underline text-inherit;
+    }
+  }
