@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import emailjs from "@emailjs/browser";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -112,20 +113,37 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!form.name || !form.email || !form.message) return;
+
     setStatus("sending");
 
-    // animate the button
     gsap.to(".submit-btn", { scale: 0.97, duration: 0.15, yoyo: true, repeat: 1 });
 
-    // simulate send (replace with your actual API call)
-    setTimeout(() => {
+    emailjs.send(
+      "service_bjnab2w",
+      "template_f5wlrdz",
+      {
+        to_email: "siyadtwerhill@gmail.com",
+        from_name: form.name,
+        from_email: form.email,
+        subject: form.subject || "New Message",
+        message: form.message,
+      },
+      "zjk-v-VzdrEkuQNS9"
+    )
+    .then(() => {
       setStatus("sent");
       setForm({ name: "", email: "", subject: "", message: "" });
-      gsap.from(".success-msg", { y: 16, opacity: 0, duration: 0.5, ease: "power3.out" });
-    }, 1500);
+
+      gsap.from(".success-msg", { y: 16, opacity: 0, duration: 0.5 });
+    })
+    .catch((error) => {
+      console.error(error);
+      setStatus("error");
+    });
   };
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
+
 
   // ── RENDER ─────────────────────────────────────────────────────────────────
   return (
