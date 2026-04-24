@@ -27,6 +27,7 @@ const Header = () => {
           <li><NavLink to="/about" className={linkClass}>About</NavLink></li>
           <li><NavLink to="/contact" className={linkClass}>Contact</NavLink></li>
           <li><NavLink to="/projects" className={linkClass}>Projects</NavLink></li>
+          <li><NavLink to="/journey" className={linkClass}>Journey</NavLink></li>
         </ul>
 
         {/* Mobile Toggle */}
@@ -62,6 +63,11 @@ const Header = () => {
           <li>
             <NavLink to="/projects" className={linkClass} onClick={() => setOpen(false)}>
               Projects
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/journey" className={linkClass} onClick={() => setOpen(false)}>
+              Journey
             </NavLink>
           </li>
         </ul>

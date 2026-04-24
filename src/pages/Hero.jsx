@@ -4,6 +4,7 @@ import missionIcon from "../assets/mission.png"
 import databaseIcon from "../assets/database.png"
 import javascriptIcon from "../assets/java-script.png"
 import architectIcon from "../assets/3d.png"
+import { NavLink } from 'react-router-dom'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -105,12 +106,12 @@ const Hero = () => {
           </p>
 
           <div className="hero-text-item flex gap-4 mt-2">
-            <a href="#" className="px-6 py-3 bg-purple-600 text-white rounded-xl font-semibold transition-all hover:scale-105 hover:bg-purple-500 active:scale-95 shadow-lg shadow-purple-500/25">
+            <NavLink to="/projects" className="px-6 py-3 bg-purple-600 text-white rounded-xl font-semibold transition-all hover:scale-105 hover:bg-purple-500 active:scale-95 shadow-lg shadow-purple-500/25">
               View Projects
-            </a>
-            <a href="#" className="px-6 py-3 border border-gray-700 text-white rounded-xl font-semibold transition-all hover:bg-white/5 active:scale-95">
+            </NavLink>
+            <NavLink to="/contact" className="px-6 py-3 border border-gray-700 text-white rounded-xl font-semibold transition-all hover:bg-white/5 active:scale-95">
               Contact Me
-            </a>
+            </NavLink>
           </div>
         </div>
       </div>
