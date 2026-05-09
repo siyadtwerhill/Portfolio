@@ -7,6 +7,7 @@ import php from "../assets/php.png";
 import sql from "../assets/sql.png";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Link } from 'react-router-dom';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -129,7 +130,7 @@ const About = () => {
               I am a dedicated problem-solver who thrives at the intersection of logical complexity and aesthetic simplicity.
             </p>
             <div className="flex flex-wrap gap-5 pt-4">
-              <button className="relative group px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl font-bold transition-all hover:scale-105 shadow-[0_0_25px_rgba(79,70,229,0.4)]">View Projects</button>
+              <Link to="/projects" className="relative group px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl font-bold transition-all hover:scale-105 shadow-[0_0_25px_rgba(79,70,229,0.4)]">View Projects</Link>
               <button className="px-8 py-4 bg-gray-900/50 border border-gray-800 rounded-xl font-bold hover:bg-gray-800 transition-all">Download CV</button>
             </div>
           </div>

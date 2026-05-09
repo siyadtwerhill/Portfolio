@@ -7,6 +7,7 @@ import { Routes, Route } from 'react-router-dom'
 import Footer from './components/Footer'
 import Background from './components/Background'
 import Journey from './pages/Journey'
+import EcommerceDetail from './pages/Ecommercedetail'
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/projects" element={<Projects />} />
           <Route path='/journey' element={<Journey />}/>
+          <Route path='/e-commerce' element={<EcommerceDetail/>}/>
         </Routes>
         <Footer />
       </div>

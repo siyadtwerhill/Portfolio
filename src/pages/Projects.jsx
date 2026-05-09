@@ -1,54 +1,37 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+import imgStorefront from "../assets/ecom-storefront.png";
 gsap.registerPlugin(ScrollTrigger);
 
 // ── PROJECT DATA ──────────────────────────────────────────────────────────────
 const projects = [
   {
     id: 1,
-    title: "Nexus SaaS Analytics",
+    title: "E-Commerce Platform",
     description:
-      "A high-performance enterprise dashboard featuring real-time data streaming and complex visualization systems for cloud infrastructure monitoring.",
-    tags: ["Laravel", "React", "Tailwind"],
-    image: null,
+      "Three-portal full-stack marketplace system featuring ShopHub storefront, vendor dashboard, and AdminOS panel. Built with React 19, Laravel 10 REST API, Sanctum authentication, and MySQL.",
+    tags: [
+      "React",
+      "Laravel",
+      "Tailwind",
+      "PHP",
+      "MySQL"
+    ],
+    image: imgStorefront,
     size: "large",
-    liveUrl: "#",
-    githubUrl: "#",
-  },
-  {
-    id: 2,
-    title: "E-commerce API",
-    description:
-      "Headless commerce engine with automated inventory sync and multi-gateway payment processing.",
-    tags: ["Node.js"],
-    image: null,
-    size: "small",
-    docsUrl: "#",
-    githubUrl: "#",
-  },
-  {
-    id: 3,
-    title: "Portfolio CMS",
-    description:
-      "A fully custom content management system built for creatives — drag-and-drop layout builder with live preview.",
-    tags: ["React", "PHP", "MySQL"],
-    image: null,
-    size: "small",
-    liveUrl: "#",
-    githubUrl: "#",
-  },
-  {
-    id: 4,
-    title: "DevOps Dashboard",
-    description:
-      "Real-time CI/CD pipeline monitoring with Slack alerts, build history, and deployment rollback controls.",
-    tags: ["Laravel", "Vue", "Tailwind"],
-    image: null,
-    size: "large",
-    liveUrl: "#",
-    githubUrl: "#",
+
+    // Main action buttons
+    githubUrl:
+      "https://github.com/siyadtwerhill/E_commarce_site_front",
+
+    backendUrl:
+      "https://github.com/siyadtwerhill/E_commarce_backend_by_yae",
+
+    liveUrl: "/e-commerce",
+
+    // Optional
+    featured: true,
   },
 ];
 
@@ -300,7 +283,7 @@ const Projects = () => {
           <div className="flex flex-col items-center gap-4 mt-12 md:mt-20">
             <p className="text-xs text-white/25">Want to see more?</p>
             <a
-              href="https://github.com/yourname"
+              href="https://github.com/siyadtwerhill"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2.5 px-6 py-3 rounded-xl text-xs font-bold text-white/50 bg-white/4 border border-white/10 hover:bg-white/8 hover:text-white hover:border-white/20 transition-all duration-200 no-underline tracking-wide"
