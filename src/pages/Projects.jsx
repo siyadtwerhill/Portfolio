@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import imgStorefront from "../assets/ecom-storefront.png";
+import { Link } from "react-router-dom";
 gsap.registerPlugin(ScrollTrigger);
 
 // ── PROJECT DATA ──────────────────────────────────────────────────────────────
@@ -176,34 +177,34 @@ const ProjectCard = ({ project }) => {
         {/* Buttons */}
         <div className="flex flex-wrap gap-2 mt-auto pt-2">
           {project.liveUrl && (
-            <a
-              href={project.liveUrl}
+            <Link
+              to='/e-commerce'
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[11px] font-bold text-indigo-400 bg-indigo-500/15 border border-indigo-500/30 hover:bg-indigo-500/25 hover:border-indigo-500/50 transition-all duration-200 no-underline whitespace-nowrap"
             >
               Live Demo <IconExternal />
-            </a>
+            </Link>
           )}
           {project.docsUrl && (
-            <a
-              href={project.docsUrl}
+            <Link
+              to='/e-commerce'
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[11px] font-bold text-violet-400 bg-violet-500/15 border border-violet-500/30 hover:bg-violet-500/25 hover:border-violet-500/50 transition-all duration-200 no-underline whitespace-nowrap"
             >
               Docs <IconDocs />
-            </a>
+            </Link>
           )}
           {project.githubUrl && (
-            <a
+            <Link
               href={project.githubUrl}
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[11px] font-bold text-gray-400 bg-white/4 border border-white/10 hover:bg-white/8 hover:text-white transition-all duration-200 no-underline whitespace-nowrap"
             >
               GitHub <IconGithub />
-            </a>
+            </Link>
           )}
         </div>
       </div>
